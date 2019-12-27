@@ -10,7 +10,7 @@
 
     <body>
 
-        <h1> <img style="align:left width:100px;height:100px;" src="logo.png"> <b style="text-align:center;">New Hire Registry Form</h1></b><br>
+        <h1 style="text-align:center;"> <img style="width:100px;height:100px;"" src="logo.png"> <b >New Hire Registry Form</b></h1><br>
 
         <div  class="row">
 
@@ -18,36 +18,33 @@
 
             <div class="col-md-6">
 
-                <form autocomplete="on" >
+                <form autocomplete="on" onsubmit="return submitFunction()" > 
 
            
 
-                    First Name:  <input type="text" pattern="[A-Z]{1}[A-Za-z]+" autofocus name="first Name" size="20" minlength="0" maxlength="20" required>
+                    First Name:  <input type="text"  autofocus name="first Name" id="fName" required><b id="ferr" style="color:red; font-size:10px"></b><br>
+                    <br>
+                    Last Name:  <input type="text"  name="Last Name" id="lName" required><b id="lerr" style="color:red; font-size:10px"></b>
 
-                    <br><br>
-
-                    Last Name:  <input type="text"  name="Last Name" size="20" minlength="0" maxlength="20">
 
                     <br><br>
 
                     Email:
 
-                    <input type="text" name="text" placeholder="xyz@email.com" pattern="[A-Za-z0-9_.]+[@]{1}[a-zA-z]+(.com|.co.in|.
-                    
-                    in)" required> <br>
+                    <input type="text" name="text" placeholder="xyz@email.com" id="Mailid" required> <b id="merror" style="color:red; font-size:10px"> </b> <br>
                     <br>
-                    Password: <input type="password" pattern="[A-Z]{1}[a-zA-z0-9!@#$%^&*]{7,}"><br> <br>
+                    Password: <input type="password" required><br> <br>
 
-                     Phone Number : <input type="text" pattern="[6-9]{1}[0-9]{9}" ><br>
+                     Phone Number : <input type="text" id="mobi"> <b id="moberror" style="color:red;font-size: 10px";></b><br>
 
                    <br>Gender:
 
-        <input type="radio" name="gender" value="M"><b>Male</b>
+        <input type="radio" name="gender" value="M"><b>Male</b> &nbsp; &nbsp;
 
-        <input type="radio" name="gender" value="F"><b>Female</b>
+        <input type="radio" name="gender" value="F"><b>Female</b>&nbsp; &nbsp;
 
-        <input type="radio" name="gender" value="oth"><b>Other<br><br></b>
-
+        <input type="radio" name="gender" value="oth"><b>Other</b><b id="Gerror" style="color:red;font-size: 10px;"></b><br>
+<br>
         Address:
 
         <input type="textarea"  rows="30" cols="40"><br><br>
@@ -56,39 +53,37 @@
 
         Qualification:
 
-        <select>
-
-        <option>B.Tech</option>
-
-        <option>BCA</option>
-
-        <option>Bsc</option>
-
-        <option>Others</option>
+        <select name="" id="state">
+            <option value="NONE">Select </option>
+            <option value="BCA">BCA</option>
+            <option value="Bsc">Bsc</option>
+            <option value="Btech">B Tech</option>
+            <option value="Others">Other</option>
+        </select><b id="Qerror" style="color:red;font-size: 10px;"></b>
 
         </select><br><br>
 
         Experience:
 
-        <input type="radio" name="Fresher" value="Fresher"><b>Fresher</b> &nbsp; &nbsp;
+        <input type="radio" name="Exp" value="Fresher"><b>Fresher</b> &nbsp; &nbsp;
 
-        <input type="radio" name="<6 months" value="<6 months"><b>< 6 months </b>&nbsp; &nbsp;
+        <input type="radio" name="Exp" value="<6 months"><b>< 6 months </b>&nbsp; &nbsp;
 
-        <input type="radio" name="3-12 months" value="3-12 months"><b> 1-2 years</b> &nbsp; &nbsp;
+        <input type="radio" name="Exp" value="3-12 months"><b> 1-2 years</b> &nbsp; &nbsp;
 
-        <input type="radio" name=">12 months" value=">12 months"><b>>2 years</b>&nbsp; &nbsp;<br><br>
+        <input type="radio" name="Exp" value=">12 months"><b>>2 years</b><b id="Error" style="color: red;font: size 10;"></b> &nbsp;<br><br>
 
         Job Location:
 
-        <select>
-
-            <option>Bangalore</option>
-
-            <option>Gurgaon</option>
-
-            <option>Hyderabad</option>
-
-            <option>Mumbai</option>
+       
+            <select name="" id="stat">
+                <option value="NONE">Select </option>
+                <option value="M">Mumbai</option>
+                <option value="Ba">Banglore</option>
+                <option value="H">Hydrebad</option>
+                <option value="D">Delhi</option>
+            </select>
+                <b id="selectError" style="color: red;font-size:10px;"></b>
 
             </select><br><br>
             Select your favorite color: <input type="color">
@@ -111,7 +106,7 @@
         </div>
 
         
-
+        <script src="validation.js"></script>
     </body>
 
     
