@@ -73,7 +73,7 @@ function Qcheck(){
     
         var state = document.getElementById("state").value;
         if(state == "NONE"){
-            document.getElementById("Qerror").innerHTML = "Please Select a State"
+            document.getElementById("Qerror").innerHTML = "Please Select Qualification"
             return false
         }else return true
     }
@@ -86,7 +86,7 @@ function Echeck(){
             err = false;
         }
     }
-    if(err)document.getElementById("Error").innerHTML = "Please Select Gender"
+    if(err)document.getElementById("Error").innerHTML = "Please Select Experience"
     return !err
 
 }
